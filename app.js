@@ -9,17 +9,17 @@
     app.use(express.static(path.join(__dirname, 'public')));
 
 
-    /* app.get('/', (req, res) => {
+    app.get('/', (req, res) => {
         res.render(path.join(__dirname, 'views', 'index.ejs'));
         //res.render('index');
-    }); */
+    })
 
     //, Servire contenuto dinamico
-    app.get('/', (req, res) => {
-        /* res.render('index', {
-            title: "Home Page",
-            body: 'Sei nella home page'
-        }); */
+    /* res.render('index', {
+        title: "Home Page",
+        body: 'Sei nella home page'
+    }); */
+    /* app.get('/', (req, res) => {
         res.render('index', {
             title: "Home Page",
             link1: 'Pagina 1',
@@ -28,8 +28,7 @@
             body: 'Sei nella home page',
             footer: 'Testo del footer'
         });
-    })
-
+    })*/
 
     .get('/about', (req, res) => {
         res.render('index', {
@@ -55,7 +54,6 @@
         });
     })
 
-
     .get('/contacts', (req, res) => {
             res.render('contacts', {
                 title: "Contacts",
@@ -66,4 +64,4 @@
                 footer: 'Testo del footer della pagina Contacts',
                 style: '/css/contacts.css'
             });
-        })
+        });
