@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href=<%= style %>>
+</head> -->
+<!-- <link rel="stylesheet" href="/css/users.css"> -->
+
+<body>
+    <header>
+        <h1><%= title %></h1>
+    </header>
+    <main>
+        <ol>
+            <% users.forEach(user => { %>
+                <li>
+                    Nome: <strong><%= user.name %></strong>,
+                    Età: <strong><%= user.age %></strong>,
+                    Ruolo: <strong><%= user.job %></strong>
+                </li>
+            <% }) %>
+        </ol>
+    </main>
+</body>
+
+</html>
